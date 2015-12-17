@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tesla's Diary</title>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <link rel="stylesheet" href="../../../css/tufte.css" />
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="group">
+            <a href="http://www.teslasdiary.com"><h2 style="text-align:left;float:left;">Tesla's Diary</h2></a>
+            <a href="http://www.teslasdiary.com/about.html"><h2 style="text-align:right;float:right; margin-right:20%" class='no-print'>About</h2></a>
+        </nav>
+    </header>
+    <br>
+    
+    <h1>Influential Feature PCA for high dimensional clustering. </h1>
+    <p class="subtitle">By Jiashun Jin, Wanjie Wang</p>
+    <content class="mn-demo">
+        <p>
+        <p>We consider a clustering problem where we observe feature vectors $X_i \in
+R^p$, $i = 1, 2, \ldots, n$, from $K$ possible classes. The class labels are
+unknown and the main interest is to estimate them. We are primarily interested
+in the modern regime of $p \gg n$, where classical clustering methods face
+challenges.
+</p>
+<p>We propose Influential Features PCA (IF-PCA) as a new clustering procedure.
+In IF-PCA, we select a small fraction of features with the largest
+Kolmogorov-Smirnov (KS) scores, where the threshold is chosen by adapting the
+recent notion of Higher Criticism, obtain the first $(K-1)$ left singular
+vectors of the post-selection normalized data matrix, and then estimate the
+labels by applying the classical k-means to these singular vectors. It can be
+seen that IF-PCA is a tuning free clustering method.
+</p>
+<p>We apply IF-PCA to $10$ gene microarray data sets. The method has competitive
+performance in clustering. Especially, in three of the data sets, the error
+rates of IF-PCA are only $29\%$ or less of the error rates by other methods. We
+have also rediscovered a phenomenon on empirical null by \cite{Efron} on
+microarray data.
+</p>
+<p>With delicate analysis, especially post-selection eigen-analysis, we derive
+tight probability bounds on the Kolmogorov-Smirnov statistics and show that
+IF-PCA yields clustering consistency in a broad context. The clustering problem
+is connected to the problems of sparse PCA and low-rank matrix recovery, but it
+is different in important ways. We reveal an interesting phase transition
+phenomenon associated with these problems and identify the range of interest
+for each.
+</p>
+<p><a href="http://arxiv.org">Donate to arXiv</a></p></p>
+        
+        <p><a href="http://www.arxiv.org">Donate to arxiv.org</a></p>
+        <p><a target="_blank" href="http://arxiv.org/pdf/1407.5241" class='no-print'>Download</a>
+        </p>
+        <p><a target="_blank" href="http://arxiv.org/abs/1407.5241">Original</a>
+        </p>
+    </content>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>
