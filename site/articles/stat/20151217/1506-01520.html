@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tesla's Diary</title>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <link rel="stylesheet" href="../../../css/tufte.css" />
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav class="group">
+            <a href="http://www.teslasdiary.com"><h2 style="text-align:left;float:left;">Tesla's Diary</h2></a>
+            <a href="http://www.teslasdiary.com/about.html"><h2 style="text-align:right;float:right; margin-right:20%" class='no-print'>About</h2></a>
+        </nav>
+    </header>
+    <br>
+    
+    <h1>An Average Classification Algorithm. </h1>
+    <p class="subtitle">By Brendan van Rooyen, Aditya Krishna Menon, Robert C. Williamson</p>
+    <content class="mn-demo">
+        <p>
+        <p>Many classification algorithms produce a classifier that is a weighted
+average of kernel evaluations. When working with a high or infinite dimensional
+kernel, it is imperative for speed of evaluation and storage issues that as few
+training samples as possible are used in the kernel expansion. Popular existing
+approaches focus on altering standard learning algorithms, such as the Support
+Vector Machine, to induce sparsity, as well as post-hoc procedures for sparse
+approximations. Here we adopt the latter approach. We begin with a very simple
+classifier, given by the kernel mean $$ f(x) = \frac{1}{n}
+\sum\limits_{i=i}^{n} y_i K(x_i,x) $$ We then find a sparse approximation to
+this kernel mean via herding. The result is an accurate, easily parallelized
+algorithm for learning classifiers.
+</p>
+<p><a href="http://arxiv.org">Donate to arXiv</a></p></p>
+        
+        <p><a href="http://www.arxiv.org">Donate to arxiv.org</a></p>
+        <p><a target="_blank" href="http://arxiv.org/pdf/1506.01520" class='no-print'>Download</a>
+        </p>
+        <p><a target="_blank" href="http://arxiv.org/abs/1506.01520">Original</a>
+        </p>
+    </content>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>
