@@ -4,6 +4,7 @@ template_directory = '_templates/'
 article_target_directory = 'site/articles/'
 list_target_directory = 'site/lists/'
 main_target_directory = 'site/'
+archive_directory = 'site/archive'
 
 MONGO_DATABASE = 'tesla_test'
 client = MongoClient('localhost', 27017)

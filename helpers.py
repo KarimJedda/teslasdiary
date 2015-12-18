@@ -6,6 +6,7 @@ from config import *
 import os
 import pystache
 import codecs
+from shutil import copyfile
 
 renderer = pystache.Renderer()
 
@@ -192,3 +193,33 @@ def generate_main_list():
         print "Double fucking sweet!"
 
 
+def archive_previous_list():
+    """Move the previous list to the archive folder"""
+    try:
+        previous_list = os.path.join('site', 'list.html')
+        destination = os.path.join(archive_directory, 'list{}.html'.format(timestamp()))
+        copyfile(previous_list, destination)
+    except Exception, e:
+        print "Couldnt archive stupid list!"
+    else:
+        print "List was archived, starting out fresh"
+
+
+def process_archived_list():
+    """Change all the links and paths for the archived list"""
+    try:
+        with open(os.path.join(archive_directory, 'list{}.html'.format(timestamp()))) as list_to_process:
+            soup = BeautifulSoup(list_to_process, 'html.parser')
+            css_path = soup.find('link', {'href': 'css/tufte.css'})
+            css_path['href'] = css_path['href'].replace('css/tufte.css', '../css/tufte.css')
+            links = soup.find_all('a')
+            for link in links:
+                if 'lists/' in link['href']:
+                    link['href'] = '../{}'.format(link['href'])
+            with open(os.path.join(archive_directory, 'list{}.html'.format(timestamp())), 'w') as processed:
+                processed.write(str(soup))
+    except Exception, e:
+        print "Shit happens processing stuff"
+        print e
+    else:
+        print "yay"
